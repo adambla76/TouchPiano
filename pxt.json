@@ -1,6 +1,6 @@
 {
-    "name": "WSTouchPianoAB",
-    "version": "1.0.1",
+    "name": "MiniPiano",
+    "version": "1.0.2",
     "description": "Waveshare electronic",
     "license": "MIT",
     "dependencies": {
