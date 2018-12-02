@@ -27,9 +27,9 @@ enum TP_PIANO {
  * Operate the function of the piano board.
  */
 //% weight=20 color=#3333FF icon="\uf001"
-namespace TouchPiano {
+namespace MiniPiano {
     //% blockId=tp_press 
-    //% block="Pey|%index|is pressed"
+    //% block="Key|%index|is pressed"
     //% weight=100
     export function TP_Press(index: TP_PIANO): boolean {
         let TPval = pins.i2cReadNumber(0x57, NumberFormat.UInt16BE);
