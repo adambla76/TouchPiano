@@ -1,16 +1,4 @@
-/*****************************************************************************
-* | File      	:	WSTouchPiano
-* | Author      :   Waveshare team
-* | Function    :	Contorl Piano  
-* | Info        :
-*----------------
-* |	This version:   V1.1
-* | Date        :   2018-05-22
-* | Info        :   Improve misidentification
-*
-* | Basic       :   2018-01-22
-* | Info        :   Basic version
-******************************************************************************/
+
 /**
  * The piano key corresponds to the touch screen TPvalue.
  */
@@ -39,7 +27,7 @@ enum TP_PIANO {
  * Operate the function of the piano board.
  */
 //% weight=20 color=#3333FF icon="\uf001"
-namespace WSTouchPiano {
+namespace TouchPiano {
     //% blockId=tp_press 
     //% block="Pey|%index|is pressed"
     //% weight=100
