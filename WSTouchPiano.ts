@@ -58,21 +58,4 @@ namespace MiniPiano {
         }
         return press;
     }
-    
-    
-    //% blockId=tp_release 
-    //% block="Keys Release"
-    //% weight=100
-    export function TP_Release(): boolean {
-        let TPval = pins.i2cReadNumber(0x57, NumberFormat.UInt16BE);
-	let press = false;	
-		if (TPval == TP_PIANO.None) {
-			press = true;
-		} else {
-			press = false;
-		}
-	return press;   
-		
-    }
-
 }
