@@ -66,7 +66,7 @@ namespace MiniPiano {
     export function TP_Release(): boolean {
         let TPval = pins.i2cReadNumber(0x57, NumberFormat.UInt16BE);
 		
-		if TPval == TP_PIANO.None {
+		if (TPval == TP_PIANO.None) {
 			return true;
 		} else {
 			return false;
