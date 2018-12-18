@@ -65,12 +65,13 @@ namespace MiniPiano {
     //% weight=100
     export function TP_Release(): boolean {
         let TPval = pins.i2cReadNumber(0x57, NumberFormat.UInt16BE);
-		
+	let press = false;	
 		if (TPval == TP_PIANO.None) {
-			return true;
+			press = true;
 		} else {
-			return false;
+			press = false;
 		}
+	return press;   
 		
     }
 
