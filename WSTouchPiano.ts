@@ -5,18 +5,18 @@
 enum TP_PIANO {
     None = 0x0000,
     C = 0x0001,
-    bD = 0x0002,
+    "C#" = 0x0002,
     D = 0x0004,
-    bE = 0x0008,
+    "D#" = 0x0008,
 
     E = 0x0010,
     F = 0x0020,
-    bG = 0x0040,
+    "F#" = 0x0040,
     G = 0x0080,
 
-    bA = 0x0100,
+    "G#" = 0x0100,
     A = 0x0200,
-    bB = 0x0400,
+    "A#" = 0x0400,
     B = 0x0800,
 
     C1 = 0x1000
@@ -60,7 +60,7 @@ namespace MiniPiano {
         return press;
     }
 
-    
+
     /**
     * Do something when a key is Piano Key detected 
     */
@@ -69,10 +69,10 @@ namespace MiniPiano {
         control.onEvent(TPKeyPressedEventID, 0, handler);
         control.inBackground(() => {
             while (true) {
-                    control.raiseEvent(TPKeyPressedEventID, 0);
-                    basic.pause(50);
+                control.raiseEvent(TPKeyPressedEventID, 0);
+                basic.pause(50);
             }
-                
+
         })
 
     }
