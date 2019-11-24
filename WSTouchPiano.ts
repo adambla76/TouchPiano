@@ -22,6 +22,7 @@ enum TP_PIANO {
     C1 = 0x1000
 }
 
+const TPKeyPressedEventID = 3103;
 
 /**
  * Operate the function of the piano board.
@@ -58,4 +59,22 @@ namespace MiniPiano {
         }
         return press;
     }
+
+    
+    /**
+    * Do something when a key is Piano Key detected 
+    */
+    //% blockId=onKeyPressed_create_event block="on Piano Key Pressed"
+    export function onKeyPressed(handler: () => void) {
+        control.onEvent(TPKeyPressedEventID, 0, handler);
+        control.inBackground(() => {
+            while (true) {
+                    control.raiseEvent(TPKeyPressedEventID, 0);
+                    basic.pause(50);
+            }
+                
+        })
+
+    }
+
 }
