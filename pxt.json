@@ -1,11 +1,11 @@
 {
     "name": "MiniPiano",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "description": "Waveshare electronic",
     "license": "MIT",
     "dependencies": {
         "core": "*",
-        "neopixel": "github:microsoft/pxt-neopixel#v0.6.12"
+        "neopixel": "github:microsoft/pxt-neopixel#v0.7.5"
     },
     "files": [
         "README.md",
